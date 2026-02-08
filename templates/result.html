@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Removed Successfully</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 40px;
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+        }
+        
+        .success-header {
+            margin-bottom: 30px;
+        }
+        
+        .success-icon {
+            font-size: 4rem;
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+        
+        .success-header h1 {
+            color: #333;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .success-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .image-comparison {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .image-box {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .image-box h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .image-container {
+            border: 3px solid #eee;
+            border-radius: 15px;
+            padding: 20px;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9ff;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            max-height: 280px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .btn {
+            padding: 18px 40px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: none;
+        }
+        
+        .download-btn {
+            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+            color: white;
+            box-shadow: 0 10px 30px rgba(76, 175, 80, 0.4);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(76, 175, 80, 0.6);
+        }
+        
+        .new-image-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        .new-image-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+        }
+        
+        .home-btn {
+            background: #f8f9ff;
+            color: #333;
+            border: 2px solid #667eea;
+        }
+        
+        .home-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        .info-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4CAF50;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+            text-align: left;
+        }
+        
+        .info-box h3 {
+            color: #2E7D32;
+            margin-bottom: 10px;
+        }
+        
+        .info-box p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        footer {
+            margin-top: 40px;
+            color: #666;
+            font-size: 0.9rem;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .processing-info {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .processing-icon {
+            font-size: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .image-comparison {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-header">
+            <div class="success-icon">✅</div>
+            <h1>Background Removed Successfully!</h1>
+            <p>Your image has been processed and the background has been removed</p>
+        </div>
+        
+        <div class="processing-info">
+            <div class="processing-icon">⚡</div>
+            <div>
+                <strong>Processing Completed</strong>
+                <p>Image processed using AI-powered background removal technology</p>
+            </div>
+        </div>
+        
+        <div class="image-comparison">
+            <div class="image-box">
+                <h3>Original Image</h3>
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename='original.jpg') }}" alt="Original Image" id="originalImage">
+                </div>
+            </div>
+            
+            <div class="image-box">
+                <h3>Background Removed</h3>
+                <div class="image-container">
+                    <img src="{{ url_for('uploads', filename=filename) }}" alt="Background Removed" id="resultImage">
+                </div>
+            </div>
+        </div>
+        
+        <div class="action-buttons">
+            <a href="{{ url_for('uploads', filename=filename) }}" download class="btn download-btn">
+                <span>⬇️</span> Download Image
+            </a>
+            
+            <a href="{{ url_for('index') }}" class="btn new-image-btn">
+                <span>🔄</span> Remove Another Background
+            </a>
+            
+            <a href="/" class="btn home-btn">
+                <span>🏠</span> Home
+            </a>
+        </div>
+        
+        <div class="info-box">
+            <h3>📝 What's Next?</h3>
+            <p>• Your image has been saved with transparent background</p>
+            <p>• Format: PNG with alpha channel</p>
+            <p>• You can use this image for presentations, e-commerce, social media, etc.</p>
+            <p>• The image will be automatically deleted after 24 hours for privacy</p>
+        </div>
+        
+        <footer>
+            <p>Powered by Flask & Rembg AI | Fast, Secure & Free</p>
+            <p style="margin-top: 10px; font-size: 0.8rem; color: #999;">
+                Processed at: <span id="timestamp"></span>
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        // Set current timestamp
+        document.getElementById('timestamp').textContent = new Date().toLocaleString();
+        
+        // Preload images for better UX
+        const resultImage = document.getElementById('resultImage');
+        const originalImage = document.getElementById('originalImage');
+        
+        // Add loading animation
+        resultImage.onload = function() {
+            resultImage.style.opacity = '1';
+        };
+        
+        // Copy image URL to clipboard
+        function copyImageLink() {
+            const imageUrl = resultImage.src;
+            navigator.clipboard.writeText(imageUrl)
+                .then(() => {
+                    alert('Image link copied to clipboard!');
+                });
+        }
+        
+        // Share functionality
+        function shareImage() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Background Removed Image',
+                    text: 'Check out my background removed image!',
+                    url: resultImage.src,
+                });
+            } else {
+                copyImageLink();
+            }
+        }
+    </script>
+</body>
+</html>

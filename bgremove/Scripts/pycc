@@ -1,0 +1,3 @@
+#!C:\Users\NAJRUL\Desktop\BGREM\bgremove\Scripts\python.exe
+from numba.pycc import main
+main()
